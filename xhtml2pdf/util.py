@@ -507,10 +507,7 @@ class pisaTempFile(object):
             try:
                 value = value.decode("utf-8")
             except UnicodeDecodeError:
-                try:
-                    value = value.decode("ISO-8859-1")
-                except UnicodeDecodeError:
-                    pass
+                pass
 
         self._delegate.write(value)
 
